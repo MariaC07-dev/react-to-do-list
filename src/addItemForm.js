@@ -4,6 +4,7 @@ import { Button, CointainerStyle, FixedWidthLabel, FixedWidthInput } from "./sha
 
 
 const  AddItemForm = (props) =>  {
+  
   const initialFormState = {id: null, name: "", dateAdded: ""}
   const [item, setItem] = useState(initialFormState);
 

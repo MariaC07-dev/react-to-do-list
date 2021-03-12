@@ -12,7 +12,6 @@ const App = () =>  {
 
   const addItem = (item) => {
     item.id = items.length + 1
-    console.log("item.id", items.length + 1 )
     setItems([...items, item])
 
   }
