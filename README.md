@@ -17,5 +17,5 @@ You will also see any lint errors in the console.
 #### How to run this project?
 Once you cloned the repository please do an npm install
 
-##### This is a Simple React Application that holds a To Do List. The list is ordered based on date added.
+##### This is a React Application that holds a To Do List. The list is ordered based on date added.
 
