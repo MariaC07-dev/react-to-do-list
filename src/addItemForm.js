@@ -1,4 +1,6 @@
 import React, { useState } from "react"
+import { Button, CointainerStyle, FixedWidthLabel, FixedWidthInput } from "./shared/styledComponents"
+
 
 
 const  AddItemForm = (props) =>  {
@@ -11,34 +13,32 @@ const handleInputChange = (event) => {
 }
 
   return (
-    <form
-      onSubmit={event => {
-        event.preventDefault()
-        if(!item.name || !item.dateAdded) return
-        props.addItem(item)
-        setItem(initialFormState)
-      }}
-    >
-      <label>Add Item: </label>
-        <input
-        type="text"
-        name={"name"}
-        value={item.name}
-        onChange={handleInputChange}
-        />
-        <br/>
-        <br/>
-        <label>Date added: </label>
-        <input
-        type="date"
-        name={"dateAdded"}
-        value={item.dateAdded}
-        onChange={handleInputChange}
-        />
-        <br/>
-        <br/>
-        <button style={{marginLeft:"100px"}}>Add item</button>
-     </form>
+    <CointainerStyle>
+      <form
+        onSubmit={event => {
+          event.preventDefault()
+          if(!item.name || !item.dateAdded) return
+          props.addItem(item)
+          setItem(initialFormState)
+        }}
+      >
+        <FixedWidthLabel>Add Item: </FixedWidthLabel>
+          <FixedWidthInput
+          type="text"
+          name={"name"}
+          value={item.name}
+          onChange={handleInputChange}
+          />
+          <FixedWidthLabel>Add Date: </FixedWidthLabel>
+          <FixedWidthInput
+          type="date"
+          name={"dateAdded"}
+          value={item.dateAdded}
+          onChange={handleInputChange}
+          />
+          <Button>Add item</Button>
+       </form>
+     </CointainerStyle>
   )
 }
 
